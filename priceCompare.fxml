@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbgui.Selector">
+   <children>
+      <TableView fx:id="priceCompare" layoutY="33.0" onMouseClicked="#getSelectedItemName" prefHeight="400.0" prefWidth="376.0">
+        <columns>
+          <TableColumn fx:id="vendName" prefWidth="126.0" text="Vendor Name">
+              <cellValueFactory><PropertyValueFactory property="vendorsNames" /></cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="itemName" prefWidth="142.0" text="Supplies Name">
+              <cellValueFactory><PropertyValueFactory property="suppliesNames" /></cellValueFactory>
+          </TableColumn>
+            <TableColumn fx:id="cost" prefWidth="107.0" text="Price">
+                <cellValueFactory><PropertyValueFactory property="priceVendors" /></cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+      <Button id="refreshTable" fx:id="refreshPriceCompare" layoutX="7.0" layoutY="2.0" mnemonicParsing="false" onAction="#refreshPriceCompare" prefHeight="31.0" prefWidth="31.0" style="-fx-background-repeat: none;" styleClass="refreshTable" stylesheets="@styles.css" />
+      <Label id="labelStyles" fx:id="displayComparison" layoutX="443.0" layoutY="166.0" prefHeight="67.0" prefWidth="121.0" styleClass="labelStyles" stylesheets="@styles.css">
+         <font>
+            <Font name="Open Sans" size="25.0" />
+         </font>
+      </Label>
+      <ImageView layoutX="426.0" layoutY="33.0">
+         <image>
+            <Image url="@images/bestPrice.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="compareInstructions" layoutX="387.0" layoutY="210.0" prefHeight="67.0" prefWidth="191.0" text="Click an item in the table to display it's cheapest price." textFill="#000000b2" wrapText="true">
+         <font>
+            <Font name="Open Sans Light" size="12.0" />
+         </font>
+      </Label>
+      <Label id="labelStyles2" fx:id="getVendorName" alignment="CENTER" contentDisplay="CENTER" layoutX="387.0" layoutY="254.0" prefHeight="47.0" prefWidth="191.0" styleClass="labelStyles2" stylesheets="@styles.css" textAlignment="CENTER" wrapText="true" />
+      <Label id="labelStyles" fx:id="dollarSign" layoutX="422.0" layoutY="180.0" prefHeight="39.0" prefWidth="25.0" styleClass="labelStyles" stylesheets="@styles.css" text="\$" textAlignment="CENTER" visible="false" />
+   </children>
+</AnchorPane>

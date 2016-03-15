@@ -1,0 +1,144 @@
+<!--Author: Michael Quattrochi-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Project Documentation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="bs/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<!--start navbar-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Final Project Docs</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#instructions">Instructions</a></li>
+                <li><a href="#viewDB">View DB</a></li>
+                <li><a href="#searchDB">Search DB</a></li>
+                <li><a href="#methods">Methods</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- end navbar-->
+<div  class="container">
+
+    <div id="welcomeHeader" class="jumbotron">
+
+        <h1>Database Final Project</h1>
+
+        <h2 id="contributors"><span class="bigBold">Contributors:</span> Michael Quattrochi, Andrew Green</h2>
+
+        <br>
+
+        <br>
+        <p class="headerP">Let's get started</p>
+
+
+
+    </div>
+
+</div>
+
+<div id="instructions" class="container">
+    <hr class="style1">
+    <div class="col-md-12">
+        <div class="row">
+        <h2>How to log on:</h2>
+        <p>username:SA</p>
+        <p>password:admin</p>
+        </div>
+        <div class="row interface">
+            <h2>The Interface</h2>
+        </div>
+        <div class="row">
+            <img src="images/interface.png" class="center-block img-responsive">
+        </div>
+        <div id="viewDB" class="row viewDB">
+            <h2>Viewing Database Information</h2>
+            <p><span class="highlight">RAW database information is located at: DB/database.script</span></p>
+            <p>To view Database information, press the Refresh button</p>
+            <img src="images/refresh.png" class=img-responvie">
+        </div>
+        <div class="row showStages">
+            <h2>Add Information to the Database</h2>
+            <p>To add information to the database, click the add button</p>
+            <img src="images/cloudAdd.png" class="img-responive">
+            <p>This will open the menu to add information to the database. Clicking an item from the "add" menu list will open a new window to input
+                desired data.
+            </p>
+        </div>
+        <div class="row delete">
+            <h2>Delete from database</h2>
+            <p>To delete from the database, select the row you wish to delete and click the delete button.</p>
+            <img src="images/delete.png" class="img-responve">
+            <p>This will permanetly delete the row and all of the associated information from the table.</p>
+        </div>
+        <div id="searchDB" class="row search">
+            <h2>Search and view wedding information</h2>
+            <p>To search the database for a specified wedding, click the magnifying glass.</p>
+            <img src="images/search.png" class="img-responsive">
+            <p>This will display a menu with various search requests.
+        </div>
+           <br>
+        <div class="row tab">
+            <h3 class>The search menu</h3>
+            <img src="images/searchMenu.PNG" class="tab img-responsive">
+            <p>Search Weddings displays the search view. You can search a wedding by entering in the wedding name.
+            Note, the wedding name does not have to be exact. The query selects the closest match to the specifed search, but the first letter must be capitalized for accurate results.</p>
+            <br>
+            <h4>The search window</h4>
+            <img src="images/searchSnip.PNG" class="img-responsive">
+            <p>The above example displays a substring of the wedding Randy & Lahey. </p>
+            <p>The search returns the specified wedding name, a list of items used at the wedding, a count of the individual item, and the various items vendor name and price.
+                On the left side of the window, the search will return the weddings date, price of the wedding, and if the wedding has been paid or not.</p>
+            <br>
+            <h4>Invalid search</h4>
+            <p>Below is an example of an improper search. The search is case sensitive to ensure accuracy of information</p>
+            <img src="images/wrongSearch.PNG" class="img-responsive">
+
+        </div>
+        <div class="row">
+            <h3>To display other desired requests, select the <img src="images/search.png" class="img-responve"> and click the specified request.</h3>
+
+</div>
+        <div class="row compareItems">
+            <h2>Comparing Items</h2>
+            <p>To compare items, click the <img src="images/search.png" class="img-responsve"> and select price comparison.</p>
+            <h3>Inside the Price Comparison Window</h3>
+            <img src="images/pricecompare.PNG" class="img-responsive">
+            <p>To initialize the the price compare, click the <img src="images/refresh.png" class="img-responsive"> button. This will fetch the data.</p>
+            <p>Selecting a specified row will display the currently selected supplies cheapest price and it's associated vendor.</p>
+            <img src="images/selectPriceCompare.PNG" class="img-responsive">
+        </div>
+    </div>
+
+</div>
+<div id="methods" class="container">
+    <hr class="style1">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Methods</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Getting the Data</h3>
+            <p>The data was parsed using a java application that randomly generated the queries and data to a file.</p>
+            <h3>Displaying the Data</h3>
+            <p>Database schema and table data were developed inside of HSQLDB and saved as a .script file. </p>
+            <h3>The GUI</h3>
+            <p>The GUI was developed utilizing the Model View Controller approach. The models hold the table columns getter and setter methods. These methods were retrieved by an observable list that updates
+            whenever the database inputs or outputs data.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

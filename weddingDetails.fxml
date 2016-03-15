@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<AnchorPane fx:id="weddingDetailsAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="971.0" style="-fx-background-size: cover; -fx-background-color: #FAFAFA;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbgui.Login">
+   <children>
+      <Label id="weddingNameDetails" fx:id="wName" contentDisplay="CENTER" layoutX="446.0" layoutY="26.0" prefHeight="61.0" prefWidth="443.0" styleClass="weddingNameDetails" stylesheets="@styles.css" textAlignment="CENTER" textFill="#21dac1">
+         <font>
+            <Font name="Open Sans" size="43.0" />
+         </font>
+      </Label>
+      <ImageView layoutX="76.0" layoutY="146.0">
+         <image>
+            <Image url="@images/calendar.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="wedDate" layoutX="156.0" layoutY="155.0" prefHeight="47.0" prefWidth="153.0" style="-fx-text-fill: #2c3e50;">
+         <font>
+            <Font name="Open Sans Light" size="20.0" />
+         </font></Label>
+      <ImageView layoutX="96.0" layoutY="230.0">
+         <image>
+            <Image url="@images/dollarSign.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="weddingCost" layoutX="156.0" layoutY="230.0" prefHeight="48.0" prefWidth="137.0" style="-fx-text-fill: #2c3e50;">
+         <font>
+            <Font name="Open Sans Light" size="20.0" />
+         </font></Label>
+      <Label id="weddingDetailsTable" fx:id="paidFull" layoutX="147.0" layoutY="333.0" prefHeight="198.0" prefWidth="171.0" style="-fx-text-fill: rgb(39, 174, 96); -fx-font-family: 'Montserrat', Arial, Helvetica, sans-serif; -fx-font-size: 50px; -fx-font-weight: 600;" styleClass="weddingDetailsTable" stylesheets="@styles.css" text="Paid √" visible="false">
+         <font>
+            <Font name="Open Sans Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="notPaid" layoutX="60.0" layoutY="495.0" prefHeight="73.0" prefWidth="329.0" style="-fx-text-fill: rgb(192, 57, 43); -fx-font-family: 'Montserrat', Arial, Helvetica, sans-serif; -fx-font-size: 50px; -fx-font-weight: 600; -fx-graphic: strikethrough;" styleClass="notPaid" text="Not Paid X" visible="false">
+         <font>
+            <Font name="Open Sans Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchWeddings" layoutX="78.0" layoutY="64.0" onKeyPressed="#searchWeddings" prefHeight="35.0" prefWidth="247.0" promptText="Search weddings">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor></TextField>
+      <ImageView layoutX="48.0" layoutY="70.0">
+         <image>
+            <Image url="@images/search.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="weddingDetailTable" layoutX="389.0" layoutY="114.0" prefHeight="507.0" prefWidth="582.0" style="-fx-background-color: #F5F5F5;" stylesheets="@styles.css">
+         <columns>
+            <TableColumn fx:id="weddingDetailSupplies" prefWidth="136.0" styleClass="table-view" text="Supplies Needed">
+               <cellValueFactory>
+                  <PropertyValueFactory property="suppName" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="amount" prefWidth="62.0" text="Amount">
+               <cellValueFactory>
+                  <PropertyValueFactory property="itemCount" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="vendNameDetail" prefWidth="155.0" text="Vendor Name">
+               <cellValueFactory>
+                  <PropertyValueFactory property="vendName" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="priceDetail" prefWidth="112.0" text="Price">
+               <cellValueFactory>
+                  <PropertyValueFactory property="priceVendor" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="totalDetail" prefWidth="116.0" text="Total">
+               <cellValueFactory>
+                  <PropertyValueFactory property="total" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" height="0.0" radius="0.30000000000000004" width="3.2" />
+         </effect>
+      </TableView>
+   </children>
+</AnchorPane>

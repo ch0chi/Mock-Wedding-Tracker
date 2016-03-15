@@ -1,0 +1,182 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,500,700);
+
+
+#loginPane{
+    
+    
+}
+
+
+#header{
+ -fx-text-fill:#3498db;
+ -fx-font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+ -fx-font-weight:500;
+ -fx-font-size:30px;
+}
+.login{
+    -fx-background-color:#ecf0f1;
+}
+
+
+#loginName{
+  
+  -fx-background-size: 30px 30px;
+  -fx-background-repeat:none;
+}
+
+#login{
+	-fx-font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	-fx-border: #fbfbfb solid 4px;
+	-fx-cursor:hand;
+    -fx-margin:0;
+    -fx-width:100%;
+    -fx-height:100px;
+	-fx-background-color: #3498db;
+	-fx-text-fill:white;
+	-fx-font-size:24px;
+	-fx--webkit-transition: all 0.3s;
+	-fx--moz-transition: all 0.3s;
+	-fx-transition: all 0.3s;
+    -fx-font-weight:700;
+}
+
+#login:hover{
+	-fx-background-color:#16a085;
+	-fx-text-fill:#ecf0f1;
+}
+	
+.submit:hover {
+	color: #3498db;
+}
+	
+.ease {
+	width: 0px;
+	-fx-height: 74px;
+	-fx-background-color: #fbfbfb;
+	-fx--webkit-transition: .3s ease;
+	-fx--moz-transition: .3s ease;
+	-fx--o-transition: .3s ease;
+	-fx--ms-transition: .3s ease;
+	-fx-transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+#refreshTable{
+ -fx-background-image:url(images/refresh.png);
+ -fx-background-repeat:none;
+-fx-background-color:none;
+}
+.refreshTable{
+	
+}
+
+#refreshTable:hover{
+ -fx-background-image:url(images/refreshHover.png);   
+}
+#addCustomer{
+-fx-background-image:url(images/cloudAdd.png);
+-fx-background-repeat:none;
+-fx-background-color:none;
+}
+.addCustomer{
+}
+#addCustomer:hover{
+-fx-background-image:url(images/cloudAddHover.png);
+-fx-background-repeat:none;
+-fx-background-color:none;    
+}
+#deleteCustomer{
+-fx-background-image:url(images/delete.png);
+-fx-background-repeat:none;
+-fx-background-color:none;    
+}
+#deleteCustomer:hover{
+-fx-background-image:url(images/deleteHover.png);
+-fx-background-repeat:none;
+-fx-background-color:none;   
+}
+#addNewUser{
+-fx-font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	-fx-border: #fbfbfb solid 4px;
+	-fx-cursor:hand;
+    -fx-margin:0;
+    -fx-width:100%;
+    -fx-height:100px;
+	-fx-background-color: #3498db;
+	-fx-text-fill:white;
+	-fx-font-size:24px;
+	-fx--webkit-transition: all 0.3s;
+	-fx--moz-transition: all 0.3s;
+	-fx-transition: all 0.3s;
+    -fx-font-weight:700;    
+}
+#addNewUser:hover{
+ -fx-background-color:#16a085;
+	-fx-text-fill:#ecf0f1;   
+}
+#labelStyles{
+-fx-text-fill:#26C281;
+-fx-font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+-fx-font-weight:500;
+ -fx-font-size:30px;
+}
+
+#labelStyles2{
+-fx-text-fill:#2C3E50;
+-fx-font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+-fx-font-weight:200;
+ -fx-font-size:20px;
+}
+
+#searchStyle {
+	-fx-background-image:url(images/search.png);
+	-fx-background-repeat:none;
+-fx-background-color:none;
+}
+#checkPaid{
+	-fx-background-image:url(images/notPaid.png);
+	-fx-background-repeat:none;
+	-fx-background-color:none;
+}
+.checkPaid{
+	-fx-background-image:url(images/notPaid.png);
+	-fx-background-repeat:none;
+	-fx-background-color:none;
+}
+#priceCompare{
+	-fx-background-image:url(images/priceCompare.png);
+	-fx-background-repeat:none;
+	-fx-background-color:none;
+}
+#checkunFinished{
+	-fx-background-image:url(images/notFinished.png);
+	-fx-background-repeat:none;
+	-fx-background-color:none;
+}
+#priceCompare{
+-fx-background-image:url(images/priceCompare.png);
+-fx-background-repeat:none;
+-fx-background-color:none;
+}
+#viewDatabase{
+	-fx-background-size:cover;
+	-fx-width:100%;
+	-fx-height:1000px;
+}
+
+
+/*replace the content value with the
+corresponding value from the list below*/
+.notPaid .text{
+	
+	-fx-strikethrough:true;
+}
+
+
+.table-view .text{
+	-fx-text-fill:red;
+}

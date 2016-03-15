@@ -1,0 +1,45 @@
+body{
+    font-family:'Open Sans', sans-serif !important;
+}
+#welcomeHeader{
+
+
+    font-family: 'Open Sans', sans-serif;
+    font-size:75px;
+    color:#CE534D;
+
+
+}
+.headerP{
+
+    color:#46433A !important;
+}
+#contributors{
+    padding-top:5%;
+    color:#46433A !important;
+}
+.bigBold{
+   font-weight:bold !important;
+}
+hr.style1{
+    border-top: 10px solid rgba(70, 67, 58, 0.85) !important;
+}
+.interface{
+    margin-bottom:10vh;
+}
+.tab{
+    padding-left:5em;
+}
+h2{
+    color:#CE534D !important;
+}
+p{
+    color:#46433A !important;
+}
+hr.style1{
+    border-top: 3px solid #8c8b8b !important;
+}
+.hightlight{
+    font-weight:bold !important;
+    font-style: italic !important;
+}

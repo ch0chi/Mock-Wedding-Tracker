@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="424.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbgui.Selector">
+   <children>
+      <TableView fx:id="unfinishedWeddings" layoutY="40.0" prefHeight="394.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="weddingName" prefWidth="285.0" text="Wedding Name">
+              <cellValueFactory><PropertyValueFactory property="weddingName" /></cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="weddingDate" prefWidth="314.0" text="Wedding Date">
+              <cellValueFactory><PropertyValueFactory property="weddingFinishDate" /></cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+      <Button id="refreshTable" layoutX="8.0" layoutY="8.0" mnemonicParsing="false" onAction="#getInProgressWeddings" prefHeight="31.0" prefWidth="33.0" styleClass="refreshTable" stylesheets="@styles.css" />
+   </children>
+</AnchorPane>

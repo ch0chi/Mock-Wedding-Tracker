@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbgui.Selector">
+   <children>
+      <TableView fx:id="selectUnpaidWedding" layoutY="31.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="600.0">
+         <columns>
+            <TableColumn fx:id="weddingName" prefWidth="233.0" text="Wedding Name">
+               <cellValueFactory>
+                  <PropertyValueFactory property="weddingName" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="weddingPrice" prefWidth="183.0" text="Cost">
+               <cellValueFactory>
+                  <PropertyValueFactory property="weddingPrice" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn fx:id="totalPaid" prefWidth="183.0" text="Amount Paid">
+               <cellValueFactory>
+                  <PropertyValueFactory property="amountPaid" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+      <Button id="refreshTable" layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onAction="#getTableRefresh" prefHeight="31.0" prefWidth="31.0" styleClass="refreshTable" stylesheets="@styles.css" />
+   </children>
+</AnchorPane>

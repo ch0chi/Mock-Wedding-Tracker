@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="346.0" styleClass="login" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbgui.Login">
+   <children>
+      <Label id="header" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="47.0" prefHeight="52.0" prefWidth="134.0" styleClass="header" stylesheets="@styles.css" text="Sign In" textAlignment="CENTER">
+         <font>
+            <Font name="Open Sans" size="27.0" />
+         </font>
+      </Label>
+      <TextField id="loginName" fx:id="username" layoutX="64.0" layoutY="137.0" prefHeight="45.0" prefWidth="220.0" promptText="Username" styleClass="loginName" stylesheets="@styles.css">
+         <font>
+            <Font name="Open Sans" size="14.0" />
+         </font></TextField>
+      <PasswordField fx:id="password" layoutX="64.0" layoutY="209.0" prefHeight="45.0" prefWidth="220.0" promptText="Password">
+         <font>
+            <Font name="Open Sans" size="14.0" />
+         </font>
+      </PasswordField>
+      <Label fx:id="result" layoutX="93.0" layoutY="279.0" prefHeight="17.0" prefWidth="149.0" textFill="RED" />
+      <Button id="login" fx:id="login" alignment="CENTER" layoutX="123.0" layoutY="308.0" mnemonicParsing="false" onAction="#buttonLogon" styleClass="login" stylesheets="@styles.css" text="Login" textAlignment="CENTER">
+         <opaqueInsets>
+            <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</AnchorPane>

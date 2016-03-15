@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory.*?>
+
+<AnchorPane id="viewDatabase" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dbgui.Login">
+   <children>
+      <Button id="refreshTable" fx:id="populateList" layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onAction="#getTableRefresh" prefHeight="32.0" prefWidth="32.0" styleClass="refreshTable" stylesheets="@styles.css" textAlignment="CENTER">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button id="deleteCustomer" fx:id="deleteButton" layoutX="119.0" layoutY="2.0" mnemonicParsing="false" onAction="#buttonDelete" onMouseClicked="#buttonDelete" prefHeight="32.0" prefWidth="32.0" styleClass="deleteCustomer" stylesheets="@styles.css">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TabPane id="viewDatabase" layoutY="35.0" prefHeight="489.0" prefWidth="975.0" stylesheets="@styles.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <tabs>
+          <Tab fx:id="vendorsTab" text="Vendors">
+               <content>
+                  <TableView id="viewDatabase" fx:id="vendorsTable" editable="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#getSelectRowID" stylesheets="@styles.css">
+                    <columns>
+                      <TableColumn fx:id="vendorID" prefWidth="474.0" text="VendorID">
+                          <cellValueFactory><PropertyValueFactory property="vendorID" /></cellValueFactory>
+                      </TableColumn>
+                      <TableColumn minWidth="0.0" prefWidth="501.0" text="VendorName">
+                          <cellValueFactory><PropertyValueFactory property="vendorName" /></cellValueFactory>
+                      </TableColumn>
+                    </columns>
+                  </TableView>
+               </content>
+          </Tab>
+          <Tab fx:id="weddingTab" text="Weddings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="weddingTable" layoutX="-3.0" layoutY="-2.0" prefHeight="465.0" prefWidth="981.0">
+                          <columns>
+                            <TableColumn fx:id="weddingID" prefWidth="100.0" text="Wedding ID">
+                                <cellValueFactory><PropertyValueFactory property="weddingID" /></cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="weddingName" prefWidth="270.0" text="Wedding Name">
+                                <cellValueFactory><PropertyValueFactory property="weddingName" /></cellValueFactory>
+                            </TableColumn>
+                              <TableColumn fx:id="weddingDate" prefWidth="160.0" text="Date">
+                                  <cellValueFactory><PropertyValueFactory property="weddingDate" /></cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="weddingPrice" prefWidth="145.0" text="Wedding Price">
+                                  <cellValueFactory>
+                                    <PropertyValueFactory property="weddingPrice" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="amountPaid" prefWidth="128.0" text="Amount Paid">
+                                  <cellValueFactory><PropertyValueFactory property="amountPaid" />
+                                 </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn fx:id="extraCosts" prefWidth="177.0" text="Extra Costs">
+                                  <cellValueFactory><PropertyValueFactory property="extraCosts" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="suppliesTab" text="Supplies">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="suppliesTable" prefHeight="461.0" prefWidth="975.0">
+                          <columns>
+                            <TableColumn fx:id="suppliesID" prefWidth="471.0" text="Supplies ID">
+                                <cellValueFactory><PropertyValueFactory property="suppliesID" /></cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="suppliesName" prefWidth="503.0" text="Supplies Name">
+                                <cellValueFactory><PropertyValueFactory property="suppliesName" /></cellValueFactory>
+                            </TableColumn>
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="priceTab" text="Price">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="priceTable" prefHeight="461.0" prefWidth="975.0">
+                          <columns>
+                            <TableColumn fx:id="vendorIDPrice" prefWidth="293.0" text="Vendor ID">
+                                <cellValueFactory><PropertyValueFactory property="vendorsSuppliesID" /></cellValueFactory>
+                            </TableColumn>
+                            <TableColumn fx:id="suppliesIDPrice" prefWidth="344.0" text="Supplies ID">
+                                <cellValueFactory><PropertyValueFactory property="suppliesSoldID" /></cellValueFactory>
+                            </TableColumn>
+                              <TableColumn fx:id="price" prefWidth="337.0" text="Price">
+                                  <cellValueFactory><PropertyValueFactory property="priceVendorsSupplies" /></cellValueFactory>
+                              </TableColumn>
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="employeeTab" text="Employee">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <TableView fx:id="EmployeeTable" prefHeight="460.0" prefWidth="975.0">
+                                <columns>
+                                    <TableColumn fx:id="employeeID" prefWidth="104.0" text="Employee ID">
+                                        <cellValueFactory><PropertyValueFactory property="employeeID" /></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="firstName" prefWidth="235.0" text="First Name">
+                                        <cellValueFactory><PropertyValueFactory property="firstName" /></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="lastName" prefWidth="176.0" text="Last Name">
+                                        <cellValueFactory><PropertyValueFactory property="lastName" /></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="street" prefWidth="232.0" text="Street">
+                                        <cellValueFactory><PropertyValueFactory property="street" /></cellValueFactory>
+                                    </TableColumn>
+                                    <TableColumn fx:id="city" prefWidth="227.0" text="City">
+                                        <cellValueFactory><PropertyValueFactory property="city" /></cellValueFactory>
+                                    </TableColumn>
+                                </columns>
+                            </TableView>
+                        </children>
+                    </AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <MenuButton id="addCustomer" fx:id="menuButton" layoutX="64.0" layoutY="2.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="49.0" style="-fx-background-repeat: no-repeat;" styleClass="addCustomer" stylesheets="@styles.css" textOverrun="CLIP">
+        <items>
+          <MenuItem fx:id="addWedding" mnemonicParsing="false" onAction="#displayNewWeddingView" text="Add Wedding" />
+          <MenuItem fx:id="addVendor" mnemonicParsing="false" onAction="#displayNewVendorView" text="Add Vendor" />
+            <MenuItem fx:id="addSupplies" mnemonicParsing="false" onAction="#displayNewSupplyView" text="Add Supplies" />
+            <MenuItem fx:id="addEmployee" mnemonicParsing="false" onAction="#displayEmployeeView" text="Add Employee" />
+        </items>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MenuButton>
+      <MenuButton id="searchStyle" cache="true" contentDisplay="CENTER" layoutX="169.0" layoutY="6.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-repeat: no-repeat;" stylesheets="@styles.css" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+        <items>
+            <MenuItem mnemonicParsing="false" onAction="#viewWeddingDetails" text="Search Weddings" />
+          <MenuItem fx:id="unPaidWeddings" mnemonicParsing="false" onAction="#viewUnpaidWeddings" text="Unpaid Weddings" />
+          <MenuItem fx:id="checkUnfinished" mnemonicParsing="false" onAction="#viewUnfinishedWeddings" text="Unfinished Weddings" />
+            <MenuItem mnemonicParsing="false" onAction="#viewPriceCompare" text="Price Compare" />
+        </items>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </MenuButton>
+   </children>
+</AnchorPane>
